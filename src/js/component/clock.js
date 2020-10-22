@@ -1,24 +1,24 @@
 import React, { useState, useEffect } from "react";
-import Card from "react-bootstrap/Card";
-import Button from "react-bootstrap/Button";
-import ReactDOM from "react-dom";
-import { propTypes } from "react-bootstrap/esm/Image";
+import PropTypes from "prop-types";
 
-export const SecondsCounter = () => {
+export function SecondsCounter(props) {
 	let [timer, setTimer] = useState(0);
 
 	useEffect(() => {
-		window.setInterval(() => {
-			timer > 9 ? setTimer(0) : setTimer(timer++);
-		}, 1000);
+		setInterval(() => {
+			setTimer(timer => timer + 1);
+		}, props.miliseconds);
 	}, []);
 
+	timer == 10 ? setTimer(0) : timer;
+
 	return (
-		<div className="SecondsCounter">
-			<h1>
-				Tiempo que llevas perdido en arreglar este ejercicio: {timer}{" "}
-				segundos
-			</h1>
+		<div>
+			<p>{timer}</p>
 		</div>
 	);
+}
+
+SecondsCounter.propTypes = {
+	miliseconds: PropTypes.number
 };

@@ -11,3 +11,25 @@
     import 'relative/path/to/stylesheet.scss';
 
 */
+body{
+    background: #7353BA;
+}
+p{
+    text-align: center;
+    line-height : 5.4rem;
+    color: #0F1020;
+    font-size: 4.5rem;
+    font-weight: 900;
+    text-shadow: 6px 6px 0 #FAA6FF;
+    margin-left: 0.3rem;
+    margin-right: 0.3rem;
+}
+button{
+	border: none;
+    color: white;
+    background: pink;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 900;
+    box-shadow: 6px 6px 0 #FAA6FF;
+}
