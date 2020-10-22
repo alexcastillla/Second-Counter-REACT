@@ -5,11 +5,11 @@ import ReactDOM from "react-dom";
 import { propTypes } from "react-bootstrap/esm/Image";
 
 export const SecondsCounter = () => {
-	const [timer, setTimer] = useState(0);
+	let [timer, setTimer] = useState(0);
 
 	useEffect(() => {
 		window.setInterval(() => {
-			setTimer(time => time + 1);
+			timer > 9 ? setTimer(0) : setTimer(timer++);
 		}, 1000);
 	}, []);
 
