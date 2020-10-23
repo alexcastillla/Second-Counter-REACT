@@ -10,7 +10,7 @@ export function SecondsCounter(props) {
 		}, props.miliseconds);
 	}, []);
 
-	timer == 10 ? setTimer(0) : timer;
+	timer > 9 ? setTimer(0) : timer;
 
 	return (
 		<div>
