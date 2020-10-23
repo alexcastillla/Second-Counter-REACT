@@ -10,7 +10,10 @@ let onehundredthousand = 100000;
 export function Home() {
 	return (
 		<div className="d-flex flex-column">
-			<div className="row p-3">
+			<div className="text-center">
+				<p>How much time you have wasted here</p>
+			</div>
+			<div className="row justify-content-center">
 				<SecondsCounter miliseconds={onehundredthousand} />
 				<SecondsCounter miliseconds={tenthousand} />
 				<SecondsCounter miliseconds={thousand} />
